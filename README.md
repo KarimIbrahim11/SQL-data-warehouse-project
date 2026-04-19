@@ -34,16 +34,33 @@ This project involves:
 
 ---
 
-## 🛠️ Important Links & Tools:
+## 📂 Project Structure & Documentation
 
-Everything is for Free!
-- **[Datasets](datasets/):** Access to the project dataset (csv files).
-- **[SQL Server Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads):** Lightweight server for hosting your SQL database.
-- **[SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16):** GUI for managing and interacting with databases.
-- **[Git Repository](https://github.com/):** Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
-- **[DrawIO](https://www.drawio.com/):** Design data architecture, models, flows, and diagrams.
-- **[Notion](https://www.notion.com/):** All-in-one tool for project management and organization.
-- **[Notion Project Steps](https://thankful-pangolin-2ca.notion.site/SQL-Data-Warehouse-Project-16ed041640ef80489667cfe2f380b269?pvs=4):** Access to All Project Phases and Tasks.
+To make it easy to navigate the project, I have organized the repository into clear sections. You can explore the technical details, code, and visualizations through the links below:
+
+### 1. 📖 [Documentation](./docs/)
+This folder contains the complete technical breakdown of the project:
+* **[Data Pipeline](./docs/data_pipeline.md)**: Detailed explanation of the Medallion Architecture (Bronze ➡️ Silver ➡️ Gold).
+* **[Data Modeling](./docs/data_modeling.md)**: Insights into the Star Schema design and entity relationships.
+* **[Data Dictionary](./docs/data_dictionary.md)**: Full reference for all tables and columns in the Gold layer.
+
+### 2. 📜 [SQL Scripts](./script/)
+Direct access to the T-SQL scripts used for data transformation:
+* **[Bronze Layer](./script/bronze/)**: Raw data ingestion scripts.
+* **[Silver Layer](./script/silver/)**: Data cleansing and standardization logic.
+* **[Gold Layer](./script/gold/)**: Business logic, aggregations, and Star Schema creation.
+
+### 3. 🖼️ [Project Visualizations](./Images/)
+A collection of diagrams and screenshots showcasing the project's technical depth:
+* **Architecture Diagrams**: High-level system flow and Medallion layers.
+* **Data Models**: Entity Relationship Diagrams (ERD) and Star Schema.
+* **Data Integration**: Visual mapping between CRM and ERP systems.
+
+### 4. 🧪 [Testing & Validation](./tests/)
+* Scripts and queries used to ensure data integrity and validate that the numbers in the Gold layer match the business requirements.
+
+### 📊 [Datasets](datasets/)
+* The raw source files (CSV) from CRM and ERP systems used in this project.
 
 ---
 
@@ -73,29 +90,33 @@ Develop SQL-based analytics to deliver detailed insights into:
 
 These insights empower stakeholders with key business metrics, enabling strategic decision-making.  
 
-For more details, refer to [docs/requirements.md](docs/requirements.md).
 
 ## 📂 Repository Structure
-```
-data-warehouse-project/
+
+```text
+SQL-data-warehouse-project/
 │
-├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
+├── 📊 data sets/           # Raw source files from CRM and ERP systems (CSV)
+│   ├── CRM/                # Customer Relationship Management datasets
+│   └── ERP/                # Enterprise Resource Planning datasets
 │
-├── images/                             # Project documentation and architecture details
-│   ├── etl.drawio                      # Draw.io file shows all different techniquies and methods of ETL
-│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
-│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
-│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
-│   ├── data_models.drawio              # Draw.io file for data models (star schema)
-│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
+├── 📑 docs/                # Full Technical Documentation & Analysis
+│   ├── data_pipeline.md    # Detailed Medallion Architecture flow
+│   ├── data_modeling.md    # Star Schema design & relationships
+│   └── data_dictionary.md  # Detailed field descriptions and metadata
 │
-├── scripts/                            # SQL scripts for ETL and transformations
-│   ├── bronze/                         # Scripts for extracting and loading raw data
-│   ├── silver/                         # Scripts for cleaning and transforming data
-│   ├── gold/                           # Scripts for creating analytical models
+├── 🖼️ images/              # Project diagrams and architecture visuals
+│   ├── etl.drawio          # ETL techniques and methods diagram
+│   ├── data_flow.png       # Visual flow from Source to Gold layer
+│   └── data_models.png     # Star Schema & ERD visualizations
 │
-├── tests/                              # Test scripts and quality files
+├── 📜 script/              # T-SQL scripts for ETL & transformations
+│   ├── bronze/             # Ingestion: Raw data loading scripts
+│   ├── silver/             # Transformation: Cleaning & standardization
+│   └── gold/               # Analytics: Final Star Schema & views creation
 │
-├── README.md                           # Project overview and instructions
+├── 🧪 tests/               # SQL scripts for data quality and validation
+│
+└── 📋 README.md            # Project overview, tools, and navigation guide
 
 ```
