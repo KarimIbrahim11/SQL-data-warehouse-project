@@ -7,8 +7,7 @@ This project demonstrates a comprehensive data warehousing and analytics solutio
 ---
 ## 🏗️ Data Architecture
 
-The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
-![Data Architecture](docs/data_architecture.png)
+The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers
 
 1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
 2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
@@ -59,7 +58,7 @@ A collection of diagrams and screenshots showcasing the project's technical dept
 ### 4. 🧪 [Testing & Validation](./tests/)
 * Scripts and queries used to ensure data integrity and validate that the numbers in the Gold layer match the business requirements.
 
-### 📊 [Datasets](datasets/)
+### 5. 📊 [Datasets](datasets/)
 * The raw source files (CSV) from CRM and ERP systems used in this project.
 
 ---
@@ -106,9 +105,6 @@ SQL-data-warehouse-project/
 │   └── data_dictionary.md  # Detailed field descriptions and metadata
 │
 ├── 🖼️ images/              # Project diagrams and architecture visuals
-│   ├── etl.drawio          # ETL techniques and methods diagram
-│   ├── data_flow.png       # Visual flow from Source to Gold layer
-│   └── data_models.png     # Star Schema & ERD visualizations
 │
 ├── 📜 script/              # T-SQL scripts for ETL & transformations
 │   ├── bronze/             # Ingestion: Raw data loading scripts
